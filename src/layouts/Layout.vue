@@ -16,9 +16,9 @@
     </q-header>
     <q-footer>
       <q-tabs>
-        <q-tab name="mails" icon="mail" label="Mails" />
-        <q-tab name="alarms" icon="alarm" label="Alarms" />
-        <q-tab name="movies" icon="movie" label="Movies" />
+        <q-tab name="List" icon="list" label="List" />
+        <q-tab name="about" icon="chat" label="About Us" />
+        <q-tab name="settings" icon="settings" label="Settings" />
       </q-tabs>
     </q-footer>
 
