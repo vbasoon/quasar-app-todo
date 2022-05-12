@@ -16,9 +16,14 @@
     </q-header>
     <q-footer>
       <q-tabs>
-        <q-tab name="List" icon="list" label="List" />
-        <q-tab name="about" icon="chat" label="About Us" />
-        <q-tab name="settings" icon="settings" label="Settings" />
+        <q-route-tab to="/" name="List" icon="list" label="List" />
+        <q-route-tab to="/about" name="about" icon="chat" label="About Us" />
+        <q-route-tab
+          to="/settings"
+          name="settings"
+          icon="settings"
+          label="Settings"
+        />
       </q-tabs>
     </q-footer>
 
