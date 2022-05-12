@@ -1,10 +1,7 @@
 <template>
   <q-page padding>
     <ul>
-      <task v-for="(task, idx) in tasks" :key="idx" :task="task">
-        <div>{{ task.title }}</div>
-        <small>{{ task.dueDate }} {{ task.dueTime }}</small>
-        <button @click="deleteTask(idx)">X</button>
+      <task v-for="(task, idx) in tasks" :key="task.id" :task="task" :idx="idx">
       </task>
     </ul>
   </q-page>
@@ -17,18 +14,21 @@ export default {
     return {
       tasks: [
         {
+          id: 1,
           title: "Task 1",
           dueDate: "2020-01-01",
           dueTime: "18:30",
           completed: false,
         },
         {
+          id: 2,
           title: "Task 2",
           dueDate: "2020-01-02",
           dueTime: "14:00",
           completed: false,
         },
         {
+          id: 3,
           title: "Task 3",
           dueDate: "2020-01-03",
           dueTime: "16:00",

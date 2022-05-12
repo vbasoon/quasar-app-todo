@@ -14,10 +14,17 @@
         <q-toolbar-title> Quasar App </q-toolbar-title>
       </q-toolbar>
     </q-header>
+    <q-footer>
+      <q-tabs>
+        <q-tab name="mails" icon="mail" label="Mails" />
+        <q-tab name="alarms" icon="alarm" label="Alarms" />
+        <q-tab name="movies" icon="movie" label="Movies" />
+      </q-tabs>
+    </q-footer>
 
     <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
       <q-list>
-        <q-item-label header> Essential Links </q-item-label>
+        <q-item-label header> Navigation </q-item-label>
 
         <EssentialLink
           v-for="link in essentialLinks"
@@ -28,6 +35,7 @@
     </q-drawer>
 
     <q-page-container>
+      <h1>Todo App</h1>
       <router-view />
     </q-page-container>
   </q-layout>
@@ -39,22 +47,22 @@ import EssentialLink from "components/EssentialLink.vue";
 
 const linksList = [
   {
-    title: "Docs",
-    caption: "quasar.dev",
-    icon: "school",
-    link: "https://quasar.dev",
+    title: "Home",
+    caption: "Home Page",
+    icon: "list",
+    link: "/",
   },
   {
-    title: "Github",
-    caption: "github.com/quasarframework",
-    icon: "code",
-    link: "https://github.com/quasarframework",
-  },
-  {
-    title: "Discord Chat Channel",
-    caption: "chat.quasar.dev",
+    title: "About",
+    caption: "About Page",
     icon: "chat",
-    link: "https://chat.quasar.dev",
+    link: "/about",
+  },
+  {
+    title: "Settings",
+    caption: "Settings Page",
+    icon: "settings",
+    link: "/settings",
   },
   {
     title: "Forum",
@@ -62,18 +70,7 @@ const linksList = [
     icon: "record_voice_over",
     link: "https://forum.quasar.dev",
   },
-  {
-    title: "Twitter",
-    caption: "@quasarframework",
-    icon: "rss_feed",
-    link: "https://twitter.quasar.dev",
-  },
-  {
-    title: "Facebook",
-    caption: "@QuasarFramework",
-    icon: "public",
-    link: "https://facebook.quasar.dev",
-  },
+
   {
     title: "Quasar Awesome",
     caption: "Community Quasar projects",

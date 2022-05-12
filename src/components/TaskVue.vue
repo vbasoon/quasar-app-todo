@@ -14,6 +14,10 @@ export default {
       type: Object,
       required: true,
     },
+    idx: {
+      type: Number,
+      required: true,
+    },
   },
 };
 </script>
