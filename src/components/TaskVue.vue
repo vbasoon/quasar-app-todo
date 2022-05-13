@@ -1,9 +1,13 @@
 <template>
-  <li>
-    <div>{{ task.title }}</div>
-    <small>{{ task.dueDate }} {{ task.dueTime }}</small>
-    <button @click="deleteTask(idx)">X</button>
-  </li>
+  <q-item tag="label" v-ripple>
+    <q-item-section side top>
+      <q-checkbox v-model="check1" />
+    </q-item-section>
+
+    <q-item-section>
+      <q-item-label>Notifications</q-item-label>
+    </q-item-section>
+  </q-item>
 </template>
 
 <script>

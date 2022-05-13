@@ -1,22 +1,15 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout view="hHh lpR fFf">
     <q-header elevated>
       <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="toggleLeftDrawer"
-        />
-
-        <q-toolbar-title> Quasar App </q-toolbar-title>
+        <q-toolbar-title class="absolute-center text-h4">
+          Quasar App
+        </q-toolbar-title>
       </q-toolbar>
     </q-header>
     <q-footer>
       <q-tabs>
-        <q-route-tab to="/" name="List" icon="list" label="List" />
+        <q-route-tab to="/" name="List" icon="list" label="Todo List" />
         <q-route-tab to="/about" name="about" icon="chat" label="About Us" />
         <q-route-tab
           to="/settings"
@@ -27,7 +20,14 @@
       </q-tabs>
     </q-footer>
 
-    <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
+    <q-drawer
+      v-model="leftDrawerOpen"
+      show-if-above
+      bordered
+      :breakpoint="767"
+      :width="250"
+      class="bg-grey-2"
+    >
       <q-list>
         <q-item-label header> Navigation </q-item-label>
 
@@ -40,7 +40,7 @@
     </q-drawer>
 
     <q-page-container>
-      <h1>Todo App</h1>
+      <h1 class="q-px-md">Todo App</h1>
       <router-view />
     </q-page-container>
   </q-layout>
@@ -104,3 +104,11 @@ export default defineComponent({
   },
 });
 </script>
+
+<style lang="scss">
+@media screen and (min-width: 767px) {
+  .q-footer {
+    display: none;
+  }
+}
+</style>
